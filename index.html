@@ -1,0 +1,40 @@
+\<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar-Planets</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Ensure canvas stays in the background */
+      #canvas {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full h-screen overflow-hidden relative">
+      <!-- Navigation Section -->
+      <div class="w-full h-screen bg-zinc-900 absolute top-0 left-0 z-[10]">
+        <nav class="w-full flex justify-between items-center px-6 py-4 text-white">
+          <h3 class="text-xl font-bold">Planets</h3>
+          <div class="flex items-center gap-4">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Contact</a>
+          </div>
+        </nav>
+      </div>
+      <!-- Canvas for Three.js Scene -->
+      <canvas id="canvas" class="absolute"></canvas>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
